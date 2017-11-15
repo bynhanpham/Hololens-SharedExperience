@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/HoloToolkit-Tests/Sharing/Scenes/SharingSpawnTest.unity
+  isLoaded: 1
+  isActive: 1
