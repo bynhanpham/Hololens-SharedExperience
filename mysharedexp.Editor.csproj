@@ -126,6 +126,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="mysharedexp.csproj">
+      <Project>{4A15F39C-1CAB-218F-9ECD-6BD2E6FEFB41}</Project>
+      <Name>mysharedexp</Name>
+    </ProjectReference>
     <ProjectReference Include="mysharedexp.Editor.Plugins.unityproj">
       <Project>{44944BD0-B46B-2D1C-FB74-29208B24808B}</Project>
       <Name>mysharedexp.Editor.Plugins</Name>
