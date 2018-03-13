@@ -6,6 +6,12 @@ TagManager:
   tags:
   - spawner
   - anchor
+  - cursor
+  - text
+  - nodelete
+  - groundcal
+  - manager
+  - pos
   layers:
   - Default
   - TransparentFX

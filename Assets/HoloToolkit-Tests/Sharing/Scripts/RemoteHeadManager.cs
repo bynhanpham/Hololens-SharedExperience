@@ -55,7 +55,7 @@ namespace HoloToolkit.Sharing.Tests
             Transform headTransform = Camera.main.transform;
 
             // Transform the head position and rotation from world space into local space
-            Vector3 headPosition = transform.InverseTransformPoint(headTransform.position);
+            Vector3 headPosition = transform.InverseTransformPoint(headTransform.position ); //I ADDED THE SPAWNER PART- GameObject.FindGameObjectWithTag("spawner").transform.position
             Quaternion headRotation = Quaternion.Inverse(transform.rotation) * headTransform.rotation;
 
             CustomMessages.Instance.SendHeadTransform(headPosition, headRotation);
@@ -145,9 +145,12 @@ namespace HoloToolkit.Sharing.Tests
         /// Creates a new game object to represent the user's head.
         /// </summary>
         /// <returns></returns>
+        /// 
+        public GameObject mask;
         private GameObject CreateRemoteHead()
         {
-            GameObject newHeadObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            GameObject newHeadObj = GameObject.CreatePrimitive(PrimitiveType.Cube); //Instantiate(mask); // 
+            newHeadObj.tag = "nodelete";
             newHeadObj.transform.parent = gameObject.transform;
             newHeadObj.transform.localScale = Vector3.one * 0.2f;
             return newHeadObj;

@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 90f43be023697b147a8aeffebeb558f2
+timeCreated: 1512982444
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arm_L
+    100002: arm_R
+    100004: Armature
+    100006: base
+    100008: base_end
+    100010: chest
+    100012: Cube.001
+    100014: Cube.001_MeshPart0
+    100016: Cube.001_MeshPart1
+    100018: Cube.001_MeshPart10
+    100020: Cube.001_MeshPart11
+    100022: Cube.001_MeshPart12
+    100024: Cube.001_MeshPart13
+    100026: Cube.001_MeshPart14
+    100028: Cube.001_MeshPart15
+    100030: Cube.001_MeshPart16
+    100032: Cube.001_MeshPart17
+    100034: Cube.001_MeshPart2
+    100036: Cube.001_MeshPart3
+    100038: Cube.001_MeshPart4
+    100040: Cube.001_MeshPart5
+    100042: Cube.001_MeshPart6
+    100044: Cube.001_MeshPart7
+    100046: Cube.001_MeshPart8
+    100048: Cube.001_MeshPart9
+    100050: Cube.006
+    100052: eye_L_bot
+    100054: eye_L_bot_end
+    100056: eye_L_top
+    100058: eye_L_top_end
+    100060: eye_R_bot
+    100062: eye_R_bot_end
+    100064: eye_R_top
+    100066: eye_R_top_end
+    100068: finger_L
+    100070: finger_L_end
+    100072: finger_R
+    100074: finger_R_end
+    100076: hand_L
+    100078: hand_R
+    100080: head
+    100082: jaw_l
+    100084: jaw_l_end
+    100086: jaw_m
+    100088: jaw_m_end
+    100090: jaw_r
+    100092: jaw_r_end
+    100094: //RootNode
+    100096: root
+    100098: shoulder_L
+    100100: shoulder_R
+    100102: Sphere
+    100104: Sphere.001
+    100106: spine
+    400000: arm_L
+    400002: arm_R
+    400004: Armature
+    400006: base
+    400008: base_end
+    400010: chest
+    400012: Cube.001
+    400014: Cube.001_MeshPart0
+    400016: Cube.001_MeshPart1
+    400018: Cube.001_MeshPart10
+    400020: Cube.001_MeshPart11
+    400022: Cube.001_MeshPart12
+    400024: Cube.001_MeshPart13
+    400026: Cube.001_MeshPart14
+    400028: Cube.001_MeshPart15
+    400030: Cube.001_MeshPart16
+    400032: Cube.001_MeshPart17
+    400034: Cube.001_MeshPart2
+    400036: Cube.001_MeshPart3
+    400038: Cube.001_MeshPart4
+    400040: Cube.001_MeshPart5
+    400042: Cube.001_MeshPart6
+    400044: Cube.001_MeshPart7
+    400046: Cube.001_MeshPart8
+    400048: Cube.001_MeshPart9
+    400050: Cube.006
+    400052: eye_L_bot
+    400054: eye_L_bot_end
+    400056: eye_L_top
+    400058: eye_L_top_end
+    400060: eye_R_bot
+    400062: eye_R_bot_end
+    400064: eye_R_top
+    400066: eye_R_top_end
+    400068: finger_L
+    400070: finger_L_end
+    400072: finger_R
+    400074: finger_R_end
+    400076: hand_L
+    400078: hand_R
+    400080: head
+    400082: jaw_l
+    400084: jaw_l_end
+    400086: jaw_m
+    400088: jaw_m_end
+    400090: jaw_r
+    400092: jaw_r_end
+    400094: //RootNode
+    400096: root
+    400098: shoulder_L
+    400100: shoulder_R
+    400102: Sphere
+    400104: Sphere.001
+    400106: spine
+    4300000: Cube.006
+    4300002: Cube.001_MeshPart0
+    4300004: Cube.001_MeshPart1
+    4300006: Cube.001_MeshPart2
+    4300008: Cube.001_MeshPart3
+    4300010: Cube.001_MeshPart4
+    4300012: Cube.001_MeshPart5
+    4300014: Cube.001_MeshPart6
+    4300016: Cube.001_MeshPart7
+    4300018: Cube.001_MeshPart8
+    4300020: Cube.001_MeshPart9
+    4300022: Cube.001_MeshPart10
+    4300024: Cube.001_MeshPart11
+    4300026: Cube.001_MeshPart12
+    4300028: Cube.001_MeshPart13
+    4300030: Cube.001_MeshPart14
+    4300032: Cube.001_MeshPart15
+    4300034: Cube.001_MeshPart16
+    4300036: Cube.001_MeshPart17
+    4300038: Sphere.001
+    4300040: Sphere
+    7400000: Armature|ArmatureAction
+    9500000: //RootNode
+    13700000: Cube.001_MeshPart0
+    13700002: Cube.001_MeshPart1
+    13700004: Cube.001_MeshPart10
+    13700006: Cube.001_MeshPart11
+    13700008: Cube.001_MeshPart12
+    13700010: Cube.001_MeshPart13
+    13700012: Cube.001_MeshPart14
+    13700014: Cube.001_MeshPart15
+    13700016: Cube.001_MeshPart16
+    13700018: Cube.001_MeshPart17
+    13700020: Cube.001_MeshPart2
+    13700022: Cube.001_MeshPart3
+    13700024: Cube.001_MeshPart4
+    13700026: Cube.001_MeshPart5
+    13700028: Cube.001_MeshPart6
+    13700030: Cube.001_MeshPart7
+    13700032: Cube.001_MeshPart8
+    13700034: Cube.001_MeshPart9
+    13700036: Cube.006
+    13700038: Sphere
+    13700040: Sphere.001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -36,6 +36,32 @@ namespace HoloToolkit.Sharing.Tests
             }
         }
 
+        public Vector3 PositionCalibrator(Vector3 pos, float height = 0, bool cameraHeight = false)
+        {
+            GameObject obj = GameObject.FindGameObjectWithTag("pos");
+            obj.transform.parent = null;
+            obj.transform.position = pos;
+            obj.transform.parent = GameObject.FindGameObjectWithTag("spawner").transform;
+            var temp = obj.transform.localPosition;
+            if (!cameraHeight)
+            {
+                temp.y = height;
+            }
+            obj.transform.localPosition = temp;
+            return obj.transform.localPosition;
+        }
+
+        //How much you want it rotated
+        //0 is facing the same direction as camera.
+        public Quaternion RotationCalibrator(int angle = 0)
+        {
+            var rot = Camera.main.transform.eulerAngles;
+            rot.y = rot.y + angle - GameObject.FindGameObjectWithTag("spawner").transform.eulerAngles.y; //rotate it 180 to face you
+            rot.x = 0;
+            rot.z = 0;
+            return Quaternion.Euler(rot);
+        }
+
         public Vector3 UserRelativeLocation(int offset = 0)
         {
             Vector3 spawnerPos = GameObject.FindGameObjectWithTag("spawner").transform.position;
@@ -46,37 +72,155 @@ namespace HoloToolkit.Sharing.Tests
 
         public void SpawnBasicSyncObject()
         {
-            //Vector3 position = Random.onUnitSphere * 2;
-            //Vector3 position = Camera.main.transform.position;
             Quaternion rotation = Random.rotation;
 
             var spawnedObject = new SyncSpawnedObject();
 
-            spawnManager.Spawn(spawnedObject, UserRelativeLocation(), rotation, spawnParentTransform.gameObject, "SpawnedObject", false);
+            spawnManager.Spawn(spawnedObject, PositionCalibrator(Camera.main.transform.position, cameraHeight: true), rotation, spawnParentTransform.gameObject, "SpawnedObject", false);
         }
 
         public void SpawnCustomSyncObject()
         {
-            Vector3 position = Random.onUnitSphere * 2;
+            Vector3 position = PositionCalibrator((Camera.main.transform.position + Camera.main.transform.forward), cameraHeight: true);
             Quaternion rotation = Random.rotation;
 
             var spawnedObject = new SyncSpawnTestSphere();
             spawnedObject.TestFloat.Value = Random.Range(0f, 100f);
 
-            spawnManager.Spawn(spawnedObject, position + UserRelativeLocation(), rotation, spawnParentTransform.gameObject, "SpawnTestSphere", false);
+            spawnManager.Spawn(spawnedObject, position, rotation, spawnParentTransform.gameObject, "SpawnTestSphere", false);
         }
 
         public void SpawnUnityChan()
         {
-            Vector3 position = UserRelativeLocation(2);
-            position.y = position.y - 1;
-            Quaternion rotation = Camera.main.transform.rotation;
+            Vector3 position = PositionCalibrator(Camera.main.transform.position + Camera.main.transform.forward * 2);
+
+            Quaternion rotation = RotationCalibrator(180);
 
             var spawnObject = new SyncSpawnUnityChan();
             spawnObject.TestFloat.Value = Random.Range(0f, 100f);
 
             spawnManager.Spawn(spawnObject, position, rotation, spawnParentTransform.gameObject, "SpawnUnityChan", false);
-            Debug.Log("SUCCESSFULLY PRINTED? Position is " + position);
+        }
+
+        public void SpawnUnityFrog()
+        {
+            Vector3 position = PositionCalibrator(Camera.main.transform.position + (Camera.main.transform.forward * 4));
+            Quaternion rotation = RotationCalibrator(270);
+
+            var spawnObject = new SyncSpawnFrog();
+            spawnObject.TestFloat.Value = Random.Range(0f, 100f);
+
+            spawnManager.Spawn(spawnObject, position, rotation, spawnParentTransform.gameObject, "SpawnFrog", false);
+        }
+
+        public void SpawnUnityRobot()
+        {
+            Vector3 position = PositionCalibrator(Camera.main.transform.position + (Camera.main.transform.forward * 5), -0.25f);
+            Quaternion rotation = RotationCalibrator(180);
+
+            var spawnObject = new SyncSpawnRobot();
+            spawnObject.TestFloat.Value = Random.Range(0f, 100f);
+
+            spawnManager.Spawn(spawnObject, position, rotation, spawnParentTransform.gameObject, "SpawnRobot", false);
+        }
+
+        public void SpawnUnityBlueThing()
+        {
+            Vector3 position = PositionCalibrator((Camera.main.transform.position + Camera.main.transform.forward * 2.25f), 1f);
+            Quaternion rotation = RotationCalibrator(90);
+ 
+            var spawnObject = new SyncSpawnBlueThing();
+            spawnObject.TestFloat.Value = Random.Range(0f, 100f);
+
+            spawnManager.Spawn(spawnObject, position, rotation, spawnParentTransform.gameObject, "SpawnBlueThing", false);
+        }
+
+        public void SpawnUnitySpider()
+        {
+            Vector3 position = PositionCalibrator(Camera.main.transform.position, 2.5f);
+            Quaternion rotation = RotationCalibrator(0);
+
+            var spawnObject = new SyncSpawnSpider();
+            spawnObject.TestFloat.Value = Random.Range(0f, 100f);
+
+            spawnManager.Spawn(spawnObject, position, rotation, spawnParentTransform.gameObject, "SpawnSpider", false);
+        }
+
+        public void SpawnUnityMud()
+        {
+            Vector3 position = PositionCalibrator(Camera.main.transform.position + Camera.main.transform.forward * 3.25f);
+
+            Quaternion rotation = RotationCalibrator(180);
+            var spawnObject = new SyncSpawnMud();
+            spawnObject.TestFloat.Value = Random.Range(0f, 100f);
+
+            spawnManager.Spawn(spawnObject, position, rotation, spawnParentTransform.gameObject, "SpawnMud", false);
+        }
+
+        public void SpawnUnityBunny()
+        {
+            Vector3 position = PositionCalibrator(Camera.main.transform.position + Camera.main.transform.forward * 2);
+
+            Quaternion rotation = RotationCalibrator(180);
+            var spawnObject = new SyncSpawnBunny();
+            spawnObject.TestFloat.Value = Random.Range(0f, 100f);
+
+            spawnManager.Spawn(spawnObject, position, rotation, spawnParentTransform.gameObject, "SpawnBunny", false);
+        }
+
+        public void SpawnUnityGhost()
+        {
+            Vector3 position = PositionCalibrator(Camera.main.transform.position + (Camera.main.transform.forward * 2), 1.7f);
+            Quaternion rotation = RotationCalibrator(180);
+
+            var spawnObject = new SyncSpawnGhost();
+            spawnObject.TestFloat.Value = Random.Range(0f, 100f);
+
+            spawnManager.Spawn(spawnObject, position, rotation, spawnParentTransform.gameObject, "SpawnGhost", false);
+        }
+
+        public void SpawnUnityPartyHat()
+        {
+            Vector3 position = PositionCalibrator(Camera.main.transform.position + Camera.main.transform.forward * 2);
+
+            Quaternion rotation = RotationCalibrator(180);
+            var spawnObject = new SyncSpawnPartyHat();
+            spawnObject.TestFloat.Value = Random.Range(0f, 100f);
+
+            spawnManager.Spawn(spawnObject, position, rotation, spawnParentTransform.gameObject, "SpawnPartyHat", false);
+        }
+
+        public void SpawnUnityPenguin()
+        {
+            Vector3 position = PositionCalibrator(Camera.main.transform.position + (Camera.main.transform.forward * 2));
+            Quaternion rotation = RotationCalibrator(180);
+
+            var spawnObject = new SyncSpawnPenguin();
+            spawnObject.TestFloat.Value = Random.Range(0f, 100f);
+
+            spawnManager.Spawn(spawnObject, position, rotation, spawnParentTransform.gameObject, "SpawnPenguin", false);
+        }
+
+        public void SpawnHead()
+        {
+            Vector3 position = PositionCalibrator(Camera.main.transform.position, cameraHeight: true);
+
+            Quaternion rotation = RotationCalibrator(180);
+
+            var spawnedObject = new SyncSpawnHead();
+
+            spawnManager.Spawn(spawnedObject, UserRelativeLocation(), rotation, spawnParentTransform.gameObject, "SpawnHead", false);
+        }
+
+        public void SpawnHead2()
+        {
+            Vector3 position = PositionCalibrator(Camera.main.transform.position + Camera.main.transform.forward * 2);
+
+            Quaternion rotation = RotationCalibrator(180);
+
+            var spawnedObject = new SyncSpawnGreenHead();
+
+            spawnManager.Spawn(spawnedObject, UserRelativeLocation(), rotation, spawnParentTransform.gameObject, "SpawnHead2", false);
         }
 
         /// <summary>
@@ -101,9 +245,21 @@ namespace HoloToolkit.Sharing.Tests
         public void ResetWorld()
         {
             GameObject spawner = GameObject.FindGameObjectWithTag("spawner");
-            for(int i = 1; i < spawner.transform.childCount; i++)
+            for(int i = 0; i < spawner.transform.childCount; i++)
             {
-                spawnManager.Delete(((SyncSpawnedObject)(spawner.transform.GetChild(i).GetComponent<DefaultSyncModelAccessor>().SyncModel)));
+                Debug.Log(spawner.transform.GetChild(i).tag);
+                if (spawner.transform.GetChild(i).tag != "nodelete" && spawner.transform.GetChild(i).tag != "pos")
+                {
+                    var model = spawner.transform.GetChild(i).GetComponent<DefaultSyncModelAccessor>();
+                    if (model != null)
+                    {
+                        spawnManager.Delete(((SyncSpawnedObject)(model.SyncModel)));
+                    }
+                    else
+                    {
+                        //GameObject.Destroy(spawner.transform.GetChild(i).gameObject);
+                    }
+                }    
             }
         }
 
