@@ -84,55 +84,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\ButtonObjectScaler.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\ButtonTimedWaiter.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\DehydrationDeactivation.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\DisplayKeywords.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\DisplaySpeechKeywords.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\FocusedObjectColorChanger.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\FocusedObjectMessageSender.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\GazeResponder.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\InputHandleCallbackFX.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\InputTest.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\MicStreamDemo.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\OnFocusEvent.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\PopupMenu.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\ScaleObjectMessageReceiver.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\SelectedObjectMessageReceiver.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\SelectedObjectMessageSender.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\SimpleGridGenerator.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\SphereGlobalKeywords.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\SphereKeywords.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\TapResponder.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\TestButton.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\TestOverrideFocusedObject.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Input\Scripts\TogglePopupMenu.cs" />
     <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\CustomMessages.cs" />
     <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\ImportExportAnchorManager.cs" />
     <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\RemoteHeadManager.cs" />
     <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\RoomTest.cs" />
     <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncObjectSpawner.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnBlueThing.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnBunny.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnFrog.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnGhost.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnGreenHead.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnHead.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnLesse.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnMud.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnPenguin.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnRobot.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnSpider.cs" />
     <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnTestSphere.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\SyncSpawnUnityChan.cs" />
     <Compile Include="Assets\HoloToolkit-Tests\Sharing\Scripts\UserNotifications.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\SpatialMapping\Scripts\PlaneFindingTest.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\SpatialMapping\Scripts\SpatialProcessingTest.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Utilities\Scripts\GestureResponder.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Utilities\Scripts\PlaneTargetGroup.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Utilities\Scripts\PlaneTargetGroupPicker.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Utilities\Scripts\TextToSpeechManagerTest.cs" />
-    <Compile Include="Assets\HoloToolkit-Tests\Utilities\Scripts\TextToSpeechOnTap.cs" />
     <Compile Include="Assets\HoloToolkit\CrossPlatform\Scripts\MetroHandleRef.cs" />
     <Compile Include="Assets\HoloToolkit\CrossPlatform\Scripts\Reflection\ReflectionExtensions.cs" />
     <Compile Include="Assets\HoloToolkit\CrossPlatform\Scripts\Reflection\TypeUtils.cs" />
@@ -364,9 +322,6 @@
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\Utils.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\VectorRollingStatistics.cs" />
     <Compile Include="Assets\HoloToolkit\Utilities\Scripts\WorldAnchorManager.cs" />
-    <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\CameraLogic.cs" />
-    <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\Demo.cs" />
-    <Compile Include="Assets\Supercyan Character Pack Free Sample\Scripts\SimpleCharacterControl.cs" />
     <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
     <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />
     <Compile Include="Assets\UnityChan\Scripts\IdleChanger.cs" />
@@ -408,13 +363,11 @@
     <Compile Include="Assets\Vuforia\Scripts\WireframeBehaviour.cs" />
     <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
-    <Compile Include="Assets\_scripts\GroundCalibration.cs" />
-    <Compile Include="Assets\_scripts\SpawnGroundCal.cs" />
     <Compile Include="Assets\_scripts\SpawnObjCol.cs" />
+    <Compile Include="Assets\_scripts\SyncSpawnUnityChan.cs" />
     <Compile Include="Assets\_scripts\VoiceCommands.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\HoloToolkit-Tests\Input\Shaders\button_unlit_shader.shader" />
     <None Include="Assets\HoloToolkit\Input\Shaders\Cursor.shader" />
     <None Include="Assets\HoloToolkit\Input\Shaders\CursorShader.shader" />
     <None Include="Assets\HoloToolkit\Input\Shaders\EditorHands.shader" />
@@ -444,7 +397,6 @@
     <None Include="Assets\HoloToolkit\Utilities\Shaders\VertexLitConfigurableTransparent.shader" />
     <None Include="Assets\HoloToolkit\Utilities\Shaders\WindowOcclusion.shader" />
     <None Include="Assets\HoloToolkit\Utilities\Shaders\macro.cginc" />
-    <None Include="Assets\Japanese Mask\Shaders\StandardSpecular.shader" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\iOS\Vuforia.UnityExtensions.iOS.XML" />
     <None Include="Assets\StreamingAssets\Vuforia\sharinganchor.xml" />

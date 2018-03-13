@@ -145,11 +145,10 @@ namespace HoloToolkit.Sharing.Tests
         /// Creates a new game object to represent the user's head.
         /// </summary>
         /// <returns></returns>
-        /// 
-        public GameObject mask;
+        ///     
         private GameObject CreateRemoteHead()
         {
-            GameObject newHeadObj = GameObject.CreatePrimitive(PrimitiveType.Cube); //Instantiate(mask); // 
+            GameObject newHeadObj = GameObject.CreatePrimitive(PrimitiveType.Cube); 
             newHeadObj.tag = "nodelete";
             newHeadObj.transform.parent = gameObject.transform;
             newHeadObj.transform.localScale = Vector3.one * 0.2f;
