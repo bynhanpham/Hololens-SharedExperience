@@ -36,6 +36,12 @@ namespace HoloToolkit.Sharing.Tests
             }
         }
 
+
+        /*
+         * Pos: World coordinates of where you want to spawn the object. Usually uses Camera.main.transform.position + Camera.main.transform.forward to spawn an object infront of the user.
+         * height: How high off the ground the object should spawn. 0 means ground level
+         * If you want the height of the object to be the same height as user, then set to true, and leave height as 0
+         */
         public Vector3 PositionCalibrator(Vector3 pos, float height = 0, bool cameraHeight = false)
         {
             GameObject obj = GameObject.FindGameObjectWithTag("pos");
@@ -51,8 +57,10 @@ namespace HoloToolkit.Sharing.Tests
             return obj.transform.localPosition;
         }
 
-        //How much you want it rotated
-        //0 is facing the same direction as camera.
+        /*
+         * Angle: How much the object should be rotated. 0 is facing the same
+         * direction as the user. 
+         */
         public Quaternion RotationCalibrator(int angle = 0)
         {
             var rot = Camera.main.transform.eulerAngles;
@@ -60,14 +68,6 @@ namespace HoloToolkit.Sharing.Tests
             rot.x = 0;
             rot.z = 0;
             return Quaternion.Euler(rot);
-        }
-
-        public Vector3 UserRelativeLocation(int offset = 0)
-        {
-            Vector3 spawnerPos = GameObject.FindGameObjectWithTag("spawner").transform.position;
-            Vector3 userPos = (Camera.main.transform.position + (Camera.main.transform.forward * offset));
-
-            return (userPos - spawnerPos);
         }
 
         public void SpawnBasicSyncObject()
@@ -121,7 +121,9 @@ namespace HoloToolkit.Sharing.Tests
         }
 
 
-        //Doesnt actually reset the world, but keeps the anchor position and deletes all objects spawned so far
+        //Doesnt actually reset the world, but keeps the anchor position and deletes all children objects of SpawnTarget, which is basically all user SPAWNED things
+        // Will also delete local objects under SpawnTarget. Add "nodelete" tag to them if you dont want them deleted. Local objects will only be deleted for current users, rather 
+        //than all users. 
         public void ResetWorld()
         {
             GameObject spawner = GameObject.FindGameObjectWithTag("spawner");
@@ -143,7 +145,7 @@ namespace HoloToolkit.Sharing.Tests
             }
         }
 
-        //Deletes everything and then reloads scene
+        //Resets the scene which basically restarts the application. Faster than closing and reopening the app.
         public void ResetScene()
         {
             ResetWorld();
