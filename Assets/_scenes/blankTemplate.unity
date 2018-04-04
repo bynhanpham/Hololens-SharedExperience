@@ -474,7 +474,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 813254006}
-  - component: {fileID: 813254007}
   - component: {fileID: 813254008}
   m_Layer: 0
   m_Name: Managers
@@ -500,19 +499,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &813254007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 813254005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 828f2f7c05836804295d27bf48c3e4b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  text: {fileID: 695984119}
 --- !u!114 &813254008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1330,7 +1316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClientRole: 0
-  ServerAddress: 100.80.226.62
+  ServerAddress: 100.80.245.98
   ServerPort: 20602
   connectOnAwake: 1
   AutoDiscoverServer: 0
